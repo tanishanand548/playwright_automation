@@ -20,3 +20,5 @@
     npx playwright test --debug                       debug tests
     npx playwright test example.spec.js --debug       debug specific test file
     npx playwright test example.spec.js:21 --debug    debug starting from specific line where test(..  starts
+### - command to show report
+    npx playwright show-report
