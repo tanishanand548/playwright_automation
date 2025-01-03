@@ -22,3 +22,9 @@
     npx playwright test example.spec.js:21 --debug    debug starting from specific line where test(..  starts
 ### - command to show report
     npx playwright show-report
+###
+    test.js 
+test script will be used to create the test and the structure of the test
+###
+    expect.js
+expect is used to run the assertions or add any checks
