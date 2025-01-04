@@ -49,3 +49,30 @@ Another way to add the module
 
 The keyword <b>async</b> before a function makes the function return a promise
 <br>The keyword <b>await</b> before a function makes the function wait for a promise
+
+<br>`Playwright comes with auto-wait built in`
+<br>It waits for elements to be actionable prior to performing actions
+<br>The default timeout is 5 sec and can be changed in config file
+<br>
+<br>`Playwright Test comes with builtin fixtures as below:`
+<br>fixtures.browser
+<br>fixtures.browserName
+<br>fixtures.context
+<br>fixtures.page
+<br>fixtures.request
+<br>You can add your own fixtures as well
+<br>
+<br>As shown below, Playwright Test will set up the page fixture before running the test, and tear it down after the test has finished
+page fixture provides a Page object that is available to the test
+
+    const { test, expect } = require('@playwright/test');
+    test('basic test', async ({ page }) => {
+    // ...
+    });
+
+## - How to record tests - Test generator
+### - Playwright comes with a tool - `Codegen` also called Test generator
+<br> Can be used to record test and generate test scripts
+<br> It opens 2 windows
+<br> 1. A browser window to interacts with the website
+<br> 2. `Playwright Inspector` window to record test
