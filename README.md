@@ -76,3 +76,5 @@ page fixture provides a Page object that is available to the test
 <br> It opens 2 windows
 <br> 1. A browser window to interacts with the website
 <br> 2. `Playwright Inspector` window to record test
+<br>
+<br> Step 1: Open terminal and run codegen - `npx playwright codegen`
