@@ -1,4 +1,4 @@
-# Playwright Automation(using node.js)
+# Playwright Automation(using Node.js)
 
 ## - Install node.js
 ## - Open cmd(windows)/terminal(mac) and run command 
@@ -78,3 +78,20 @@ page fixture provides a Page object that is available to the test
 <br> 2. `Playwright Inspector` window to record test
 <br>
 <br> Step 1: Open terminal and run codegen - `npx playwright codegen`
+<br> Demo site for record test - `saucedemo.com`
+<br> Step 2: Select and click the username, password, login button etc and the test is in playwright inspector
+<br> Step 3: Record all the test in the playwright inspector after that stop recording
+<br> Step 4: Copy the record test, and make a new file inside the test folder in vs code and paste the recorded test
+<br> Step 5: Run the test in headed mode and specify one browser for less time
+    
+    npx playwright test record1_demo.spec.js --project chromium --headed
+`record1_demo.spec.js`: it is a file name where the recorded test is saved<br>
+<br> We also add the url:
+
+    npx playwright codegen google.com
+<br> Record on a specific browser (default:chromium): `npx playwright codegen --browser firefox`<br>
+<br> Record and save to a file:  `npx playwright codegen --target javascript -o record_example.js`
+<br> `record_example.js`: is a file name where we can save the recorded test<br>
+<br> Set viewport - screen resolution (size):  `npx playwright codegen --viewport-size=800,600`<br> 
+<br> Emulate devices:  `npx playwright codegen --device="iPhone 11"`<br> 
+<br> Emulate color scheme (if available): `npx playwright codegen --color-scheme=dark`<br> 
