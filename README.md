@@ -96,8 +96,8 @@ page fixture provides a Page object that is available to the test
 <br> Emulate devices:  `npx playwright codegen --device="iPhone 11"`<br> 
 <br> Emulate color scheme (if available): `npx playwright codegen --color-scheme=dark`<br> 
 ## - Trace Viewer
-<br> GUI tool that helps viweing the executed test along with snapshots, timeline and other details(traces)
+GUI tool that helps viweing the executed test along with snapshots, timeline and other details(traces)
 ### - How to use Trace Viewer
-<br> Step 1: Open config file and set `trace: 'on-first-retry'`
+Step 1: Open config file and set `trace: 'on-first-retry'`
 <br> It means collect trace when retrying the failed test for the 1st time only
 <br> Step 2: Save and Run a test to fail
