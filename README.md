@@ -101,3 +101,13 @@ GUI tool that helps viweing the executed test along with snapshots, timeline and
 Step 1: Open config file and set `trace: 'on-first-retry'`
 <br> It means collect trace when retrying the failed test for the 1st time only
 <br> Step 2: Save and Run a test to fail
+<br> Step 3 - Check <b>trace.zip</b> file created under test-results folder (after running the test)
+<br> Step 4 - View trace - `npx playwright show-trace trace.zip` <b>or</b> Open Playwright test report > Click on Retry #1 > scroll down and click on trace image <b>or</b> Go to ` https://trace.playwright.dev/`
+### - Trace Viewer Options
+`on-first-retry`  - Record a trace only when retrying a test for the first time.
+<br>`off` - Do not record a trace.
+<br>`on` - Record a trace for each test. (not recommended as it's performance heavy)
+<br>`retain-on-failure` - Record a trace for each test, but remove it from successful test runs
+<br> To set trace on from command: `npx playwright test --trace on`
+
+### - How to set Tracing programmatically
