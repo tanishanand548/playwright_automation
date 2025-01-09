@@ -6,7 +6,7 @@
     node --version or node -v
 ## - open vs code and make a project folder
 ## - Installation of Playwright
-### - click view > terminal, and run this command 
+### - click view > terminal, and run this command
     npm init playwright@latest
 ## - Commands for running test
     npx playwright test                               runs all tests on all browsers in headless mode
