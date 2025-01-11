@@ -111,3 +111,30 @@ Step 1: Open config file and set `trace: 'on-first-retry'`
 <br> To set trace on from command: `npx playwright test --trace on`
 
 ### - How to set Tracing programmatically
+
+    test.only('test demo', async ({ page, context }) =＞ {
+     await context.tracing.start({snapshots: true, screenshots: true})
+     // test code
+     await context.tracing.stop({path: 'test-trace.zip'});
+    });
+### - In another way(real world scenario)
+
+    let context
+    let page
+    test.beforeAll(async ({ browser }) =＞ {
+     context = await browser.newContext()
+     await context.tracing.start({ screenshots: true, snapshots: true })
+     page = await context.newPage()
+    })
+
+    test.afterAll(async () =＞ {
+     await context.tracing.stop({ path: 'test-trace.zip' });
+    })
+
+## - How To Find Web Objects
+### - What are Selectors and Locators
+Selectors are the strings/properties of the web objects
+<br> Selectors are used to create Locators
+<br> Selectors e.g. CSS, Class, Name, ID, Text, XPath<br>
+<br> To find an object or element we use the syntax: `page.locator(selector[, options])`
+<br> Locator is a class in Playwright library
